@@ -1,0 +1,15 @@
+<li>
+    <div style="width: 100%;border: 0px solid black;margin: 10px;height: 17px;">
+        <div class="todoLeft">
+            <button class="cButton " *ngIf="!todo?.completed" (click)="markAsComplete(todo.task)">Completed</button>
+
+        </div>
+        <div class="todoCenter">
+            <span class=" {{ strikeCss}}"> {{todo.task}} </span> 
+            
+        </div>
+        <div class="todoRight" >
+            <button (click)="removeTask(todo.task)">&#10006;</button>        
+        </div>
+    </div>
+</li>

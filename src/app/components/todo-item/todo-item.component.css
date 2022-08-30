@@ -1,0 +1,28 @@
+.cButton {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 1;
+    border-color: #ff69b4;
+    color: #ff69b4;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.strike {
+    text-decoration: line-through;
+}
+
+.todoLeft {
+    float:left; 
+    width:25%;
+}
+.todoCenter{
+    float:left; 
+    width:50%;
+}
+.todoRight {
+    float:right;
+    width:10%;
+}

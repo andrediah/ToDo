@@ -1,0 +1,11 @@
+<div style="margin: 5%">
+    <form (ngSubmit)="addTask()">
+        <label for="name">Enter a new task </label>
+        <div style="text-align: center">
+        <input style="width: 100%" name="name" id="name" [(ngModel)]="newTodoName" type="text"><br>
+
+            <button type="submit" class="sButton">Add </button>
+
+        </div>
+    </form>
+</div>

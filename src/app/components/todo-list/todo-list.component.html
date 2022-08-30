@@ -1,0 +1,23 @@
+<div class="mainOutside">
+    <div class="main">
+        <h1>To-Do List</h1>
+        <h4>A place to store your todos</h4>
+
+        <div *ngIf="taskList.length > 0">
+            <ol>
+            <ng-container *ngFor="let item of taskList; let i=index">
+                    <app-todo-item [todo]="item" (markItemAsCopleteEvent)="markAsComplete($event)" 
+                    (remvoeItemEvent)="removeTask($event)">
+                    </app-todo-item>            
+            </ng-container>    
+            </ol>
+        </div>
+        <div *ngIf="taskList.length <= 0">
+            Congratualtions. You're all caught up.
+
+        </div>
+        <app-todo-form (saveEvent)="addNewTask($event)">
+
+        </app-todo-form>
+    </div>
+</div>
