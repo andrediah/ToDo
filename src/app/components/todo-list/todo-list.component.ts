@@ -9,8 +9,8 @@ import { Todo } from 'src/app/interfaces/todo';
 export class TodoListComponent implements OnInit {
   taskList:Todo[] = [
       {completed: true,task:"Bake a cake"},
-      {completed: false,task:"light a candle"},
-      {completed: false,task:"takea a break"},
+      {completed: false,task:"Light a candle"},
+      {completed: false,task:"Take a break"},
       {completed: false,task:"Look like a boss"}
 
   ];
