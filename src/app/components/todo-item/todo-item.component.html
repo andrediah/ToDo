@@ -5,7 +5,7 @@
 
         </div>
         <div class="todoCenter">
-            <span class=" {{ strikeCss}}"> {{todo.task}} </span> 
+            <span [ngClass]="todo.completed ? 'strike' : '' "> {{todo.task}} </span> 
             
         </div>
         <div class="todoRight" >
