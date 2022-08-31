@@ -24,4 +24,5 @@ export class TodoItemComponent implements OnInit {
   removeTask(taskName:string|undefined):any{
     this.remvoeItemEvent.emit(taskName);
   }
+
 }

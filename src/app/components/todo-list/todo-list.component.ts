@@ -14,6 +14,8 @@ export class TodoListComponent implements OnInit {
       {completed: false,task:"Look like a boss"}
 
   ];
+  filteredList:Todo[] = [];
+  filter:string = '';
   constructor() { }
 
   ngOnInit(): void {
@@ -36,5 +38,16 @@ export class TodoListComponent implements OnInit {
     if (task.length === 0){     
       this.taskList.push(newTodo);
     }
+  }
+  searchTodo(e:any):void {
+    this.filter = e;
+    console.log(e)
+    if (this.filter.length > 0){
+      this.filteredList = this.taskList.filter(t => t.task.includes(this.filter));
+    }
+    else{
+      this.filteredList = [];
+    }
+
   }
 }
