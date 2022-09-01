@@ -50,4 +50,10 @@ export class TodoListComponent implements OnInit {
     }
 
   }
+  updateTask(myTodo:Todo):void{
+    let task = this.taskList.filter(t => t.task === myTodo.task);
+    if (task !== undefined){     
+      task[0] = myTodo;
+    }
+  }
 }

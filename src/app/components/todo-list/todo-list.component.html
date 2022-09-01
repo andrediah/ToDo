@@ -2,15 +2,18 @@
     <div class="main">
         <h1>To-Do List</h1>
         <h4>A place to store your todos</h4>
-        <input style="width: 100%" name="name" id="name"  (ngModelChange)="searchTodo($event)" [(ngModel)]="filter" type="text" placeholder="Filter list"><br>
+        <input style="width: 100%" name="name" id="name"  (ngModelChange)="searchTodo($event)" [(ngModel)]="filter" type="text" placeholder="Filter your to-dos"><br>
 
         <div *ngIf="filteredList.length == 0 ">
            
             <div *ngIf="taskList.length > 0">
                 <ol>
                 <ng-container *ngFor="let item of taskList; let i=index">
-                        <app-todo-item [todo]="item" (markItemAsCopleteEvent)="markAsComplete($event)" 
-                        (remvoeItemEvent)="removeTask($event)">
+                        <app-todo-item [todo]="item" 
+                        (markItemAsCopleteEvent)="markAsComplete($event)" 
+                        (remvoeItemEvent)="removeTask($event)"
+                        (updateItemEvent)="updateTask($event)"
+                        >
                         </app-todo-item>            
                 </ng-container>    
                 </ol>

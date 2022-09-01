@@ -26,3 +26,8 @@
     float:right;
     width:10%;
 }
+
+.todoLeftCenter{
+    float:left; 
+    width:50%;
+}
